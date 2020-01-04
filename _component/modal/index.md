@@ -1,60 +1,38 @@
 ---
-title: Modal
+title: modal
+layout: default
 path_slug: modal
-layout: component
-category: ui
-iframe_height: medium
+category: global
+iframe_height: short
 ---
 
-{% include_relative _notes.md %}
-
-<div class="cf">
-	<a href="{{ site.baseurl }}/component/{{ page.path_slug }}/example.html" target="_blank" class="example-link">Open example in new window</a>
-</div><!--/.cf-->
-
-<iframe {% if page.iframe_height %}class="h-{{ page.iframe_height }}"{% endif %} src="{{ site.baseurl}}/component/{{ page.path_slug }}/example.html"></iframe>
-
-<h3>HTML</h3>
-
-<div class="code-block">
-<button class="copy-clipboard" data-clipboard-action="copy" data-clipboard-target=".copy-html-snippet-1">Copy to clipboard</button>
-<div class="copy-html-snippet-1">
-{% highlight html %}
-<script>
-	/* Add to <head> */
-	// Remove no-js and add 'js' to the HTML
-	document.documentElement.className = document.documentElement.className.replace('no-js', ' ');
-	document.documentElement.className += ' js ';
-</script>
-{% endhighlight %}
-</div>
+<div class="u-align-center--small">
+	<h1>{{page.title}}</h1>
+	<p class="u-lighten u-spacing__bottom--large">
+		A third party plugin we use to produce an accessible modal dialog
+		component.
+	</p>
 </div>
 
-This component requires a `js` class to be present on the `html` element to fully function. If you're using a script like [Modernizr](http://modernizr.com), it will handle this for you. If not, you'll need to add the above script to the `head` of the document. Adding it into the `head` will assure there will be no jumpiness in the UI while the JavaScript and CSS are loading.
+{% include_relative content/_notes.md %}
 
-{% include partials/html-component.md %}
+<h2 class="u-spacing__top">Usage</h2>
 
-<h3>SCSS <span class="link"><a href="vendor/css/scss/modal.scss" target="_blank">Plugin</a> | <a href="vendor/css/scss/flexbox-mixins.scss" target="_blank">Mixins</a></span></h3>
-
-<div class="code-block">
-<button class="copy-clipboard" data-clipboard-action="copy" data-clipboard-target=".copy-scss-snippet">Copy to clipboard</button>
-<div class="copy-scss-snippet">
-{% highlight scss %}
-{% include_relative vendor/css/scss/modal.scss %}
-{% endhighlight %}
-</div>
+<div class="component-block u-spacing__bottom--large">
+	{% include_relative content/_code.md %}
 </div>
 
-<h3>JS <span class="link"><a href="component-usage.js" target="_blank">Usage</a> | <a href="vendor/js/modal.js" target="_blank">Plugin</a> | <a href="vendor/js/modal.hash.click.js" target="_blank">Extension</a></span></h3>
-  
-{% include partials/js-component.md %}
+## Documentation
+<div class="component-block u-spacing__bottom--large">
+	{% include_relative content/_documentation.md %}
+</div>
 
-{% include_relative _apis.md %}
+## Browser Compatibility
+<div class="component-block u-spacing__bottom--large">
+	{% include_relative content/_support.md %}
+</div>
 
-<h3>Browser Compatibility</h3>
-
-{% include_relative _support.md %}
-
-<h3>Resources</h3>
-
-{% include_relative _resources.md %}
+## Resources
+<div class="component-block u-spacing__bottom--large">
+	{% include_relative content/_resources.md %}
+</div>

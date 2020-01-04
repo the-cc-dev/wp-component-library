@@ -1,53 +1,56 @@
 ---
-title: Accordion
-layout: component
+title: accordion
+layout: default
 path_slug: accordion
-category: ui
-iframe_height: medium
+iframe_height: short
+category: global
 ---
 
-{% include_relative _notes.md %}
-
-<div class="cf">
-	<a href="{{ site.baseurl }}/component/{{ page.path_slug }}/example.html" target="_blank" class="example-link">Open example in new window</a>
-</div><!--/.cf-->
-
-<iframe {% if page.iframe_height %}class="h-{{ page.iframe_height }}"{% endif %} src="{{ site.baseurl }}/component/{{ page.path_slug }}/example.html"></iframe>
-
-<h3>HTML <span class="link"><a href="component.html" target="_blank">View Generated HTML</a></span></h3>
-
-<div class="code-block">
-<button class="copy-clipboard" data-clipboard-action="copy" data-clipboard-target=".copy-html-snippet">Copy to clipboard</button>
-<div class="copy-html-snippet">
-{% highlight html %}
-<script>
-	/* Add to <head> */
-	// Remove no-js and add 'js' to the HTML
-	document.documentElement.className = document.documentElement.className.replace('no-js', ' ');
-	document.documentElement.className += ' js ';
-</script>
-{% endhighlight %}
-</div>
+<div class="u-align-center--small">
+	<h1>{{page.title}}</h1>
+	<p class="u-lighten">
+		An accessible accordion component to help structure large amounts of
+		content on a page.
+	</p>
+	<a href="https://travis-ci.org/10up/component-accordion" class="u-spacing__bottom--large u-inline-block">
+		<img
+			src="https://travis-ci.org/10up/component-accordion.svg?branch=master"
+			alt="Build status.">
+	</a>
 </div>
 
-This component requires a `js` class to be present on the `html` element to fully function. If you're using a script like [Modernizr](http://modernizr.com), it will handle this for you. If not, you'll need to add the above script to the `head` of the document. Adding it into the `head` will assure there will be no jumpiness in the UI while the JavaScript and CSS are loading.
+{% include_relative content/_notes.md %}
 
+<div class="u-spacing__top--large">
 
-{% include partials/html-tabs.md %}
+	<h2>Examples</h2>
 
-<h3>SCSS <span class="link"><a href="scss/component.scss" target="_blank">Download SCSS</a></span></h3>
-{% include partials/scss-component.md %}
+	<div class="component-block u-spacing__bottom--large">
+		{% include_relative content/_examples.md %}
+		<ul class="button-group button-group--flush">
+			<li><button data-width="small" id="rwd-button-small" type="button" class="rwd-button button button--tertiary" aria-controls="example-iframe" aria-label="Resize iframe display: small.">Small Screen</button></li>
+			<li><button data-width="large" id="rwd-button-large" type="button" class="rwd-button button button--tertiary" aria-controls="example-iframe" aria-label="Resize iframe display: large.">Large Screen</button></li>
+			<li><button data-width="reset" id="rwd-button-reset" type="button" class="rwd-button button button--tertiary-dark button--tertiary" aria-controls="example-iframe" aria-label="Reset iframe display.">Reset</button></li>
+		</ul>
+	</div>
+</div>
 
+## Usage
+<div class="component-block u-spacing__bottom--large">
+	{% include_relative content/_code.md %}
+</div>
 
-<h3>JS <span class="link"><a href="component-usage.js" target="_blank">Usage</a> | <a href="component.js" target="_blank">Plugin</a></span></h3>
-{% include partials/js-component.md %}
+## Documentation
+<div class="component-block u-spacing__bottom--large">
+	{% include_relative content/_documentation.md %}
+</div>
 
-{% include_relative _apis.md %}
+## Browser Compatibility
+<div class="component-block u-spacing__bottom--large">
+	{% include_relative content/_support.md %}
+</div>
 
-<h3>Browser Compatibility</h3>
-
-{% include_relative _support.md %}
-
-<h3>Resources</h3>
-
-{% include_relative _resources.md %}
+## Resources
+<div class="component-block u-spacing__bottom--large">
+	{% include_relative content/_resources.md %}
+</div>

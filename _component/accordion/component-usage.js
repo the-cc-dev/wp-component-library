@@ -1,5 +1,8 @@
-TenUp.accordion( {
-	target: '.accordion', // ID (or class) of accordion container
-}, function() {
-	console.log( 'Amazing callback function!' );
+import Accordion from '@10up/component-accordion';
+
+new Accordion( '.accordion', {
+  onCreate: function() { /* callback content */ },
+  onOpen: function() { /* callback content */ },
+  onClose: function() { /* callback content */ },
+  onToggle: function() { /* callback content */ }
 } );
